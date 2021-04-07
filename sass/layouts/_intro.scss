@@ -1,0 +1,41 @@
+.intro{
+  background: linear-gradient(-45deg,#EC5252 0%,#6E1A52 100%);
+  .container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    .intro__item{
+      display: flex;
+      padding: 20px;
+      justify-content: center;
+      i{
+        font-size: 47px;
+        margin-right: 16px;
+      }
+      .intro__content{
+        p{
+          margin-bottom: 0;
+          font-size: $fs-0;
+        }
+        b{
+          font-size: $fs-0 + 2;
+        }
+      }
+    }
+  }
+}
+@include responsive('extra-large'){
+  .intro{
+    .container{
+    .intro__item{
+      i{
+        display: none;
+      }
+      }
+    }
+  }
+}
+@include responsive('medium'){
+  .intro{
+    display: none;
+  }
+}

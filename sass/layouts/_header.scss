@@ -1,0 +1,120 @@
+header{
+  .navbar{
+    flex-wrap: nowrap;
+    .col-sm-9.col-md-7{
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .header__left{
+      display: flex;
+      align-items: center;
+      @include styleText($color-black-light,$fs-1,$fw-normal);
+      .navbar-brand{
+        img{
+          width: 110px;
+        }
+      }
+      .header__cate{
+        margin-right: 5px;
+        padding: 6px;
+        border: 1px solid transparent;
+        transition: all .25s;
+        i{
+          margin-right: 5px;
+        }
+        &:hover{
+          border: 1px solid $color-gray-6;
+          border-radius: $border-radius;
+          background: $color-white-cream;
+        }
+      }
+      .header__form{
+        flex-grow: 1;
+        display: inline-block;
+        input{
+          font-size: $fs-1;
+          background: $color-white-cream;
+          border: none;
+        }
+        button{
+          padding: .28rem .75rem;
+          background: $color-white-cream;
+          border: none;
+          color: $color-red-0;
+          transition: all .5s;
+          &:hover{
+            background: $color-red-0;
+            color: $color-white-cream;
+          }
+        }
+      }
+    }
+    .header__right{
+      ul{
+        display: flex;
+        flex-direction: row;
+        align-items:center;
+        li.nav-item:nth-child(3){
+          font-size: 20px;
+          color: $color-gray-4;
+          margin-right: 6px;
+          border: 1px solid transparent;
+          .nav-link{
+            border-radius: 50%;
+          }
+        }
+        .nav-link{
+          border: 1px solid transparent;
+          transition: all .25s;
+          border-radius: $border-radius;
+          @include styleText($color-black-light,$fs-1,$fw-normal);
+          &:hover{
+            border: 1px solid $color-gray-6;
+            background: $color-white-cream;
+          }
+        }
+        .teach{
+          padding-right: 12px;
+          border-right: 1px solid $color-gray-6;
+          margin-right: 6px;
+        }
+        
+      }
+    }
+  }
+}
+
+
+//Respon
+@include responsive('extra-large'){
+  .header__right{
+    .navbar-nav{
+      .business,.teach{
+        display: none;
+      }
+    }
+  }
+}
+@include responsive('medium'){
+  span.navbar-toggler-icon{
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(104,111,122,1)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  }
+  .header__left{
+    .header__cate,form.header__form{
+      display: none;
+    }
+    .navbar-brand{
+      margin: 0 auto;
+    }
+  }
+  .header__right{
+    ul{
+      justify-content: flex-end;
+    }
+    .nav-item{
+      .udeBtn-white,.udeBtn-red{
+        display: none;
+      }
+    }
+  }
+}

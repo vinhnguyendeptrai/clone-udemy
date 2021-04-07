@@ -1,0 +1,36 @@
+.carouselUdemy{
+  background-image: url('../img/cover.jpg');
+  max-width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 500px;
+  .container{
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    .carousel__content{
+      h2{
+        font-size: 40px;
+      }
+      p{
+        font-size: $fs-2 - 2;
+      }
+      .carousel__form{
+        input{
+          padding: 11px 17px;
+          font-size: $fs-2;
+          border: none;
+        }
+        button{
+          background-color: $color-white-0;
+          color: $color-red-0;
+          border: none;
+          &:hover{
+            background-color:$color-red-0;
+            color: $color-white-0;
+          }
+        }
+      }
+    }
+  }
+}

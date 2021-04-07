@@ -1,0 +1,43 @@
+.card__item{
+  margin-right: $mg-1 + 2;
+  border: 1px solid $color-gray-6;
+  img{
+    max-width: 100%;
+  }
+  .card__text{
+    padding: 15px 10px 0 15px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    p{
+      @include styleText($color-black-0,$fs-0,$fw-bold-1);
+      margin-bottom: $mg-1;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    span{
+      @include styleText($color-gray-4,$fs-1 - 1,$fw-normal);
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+  }
+  .card__staring{
+    margin-top: $mg-1 + 4 ;
+    margin-bottom: $mg-1;
+    font-size: $fs-1;
+    i{
+      color:$color-yellow;
+    }
+    b{
+      color: $color-black-light;
+    }
+  }
+  .card__price{
+    @include styleText($color-black-0,$fs-2 - 2,$fw-bold-1);
+    text-align: right;
+    span{
+      @include styleText($color-black-0,$fs-1,$fw-normal);
+    }
+  }
+}

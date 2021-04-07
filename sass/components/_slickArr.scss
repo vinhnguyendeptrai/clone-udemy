@@ -1,0 +1,13 @@
+button.slick-next {
+  right: 24.5px;
+  &::before {
+    color: $color-blue;
+    font-size: 60px;
+    line-height: 30px;
+    transition: all .5s;
+  }
+  &:hover::before{
+    color: #00576b;
+    opacity: 1;
+  }
+}

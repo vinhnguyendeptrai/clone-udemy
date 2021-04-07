@@ -1,0 +1,48 @@
+.banner{
+  background: $color-black-0;
+  .banner__container{
+    font-size: 32px;
+    padding-bottom: 32px;
+    padding-top: 48px;
+  }
+  .banner__line{
+    background: linear-gradient(-45deg,$color-red-0 0%,$color-purple 100%);
+    height: 8px;
+  }
+  .banner__top,.banner__bot{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+  }
+  .banner__mid{
+    display: grid;
+    grid-template-columns: 22% 56% 22%;
+    align-items: center;
+    padding-bottom: 48px;
+    padding-top: 32px;
+    .banner__content{
+      h2{
+        @include styleText($color-white-0,$fs-3,$fw-bold-1);
+        margin-bottom: 16px;
+      }
+      p{
+        @include styleText($color-gray-5,$fs-0,$fw-normal);
+        margin-bottom: 24px;
+      }
+    }
+  }
+}
+
+@include responsive('large'){
+  .banner{
+    .banner__top,.banner__bot{
+      display: none;
+    }
+    .banner__mid{
+      display: flex;
+      justify-content: center;
+      i{
+        display: none;
+      }
+    }
+  }  
+}

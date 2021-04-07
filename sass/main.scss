@@ -1,0 +1,29 @@
+//helper
+@import'./helper/variables';
+@import './helper/mixin';
+
+// vendor
+@import './vendor/slick-theme.scss';
+@import './vendor/slick.scss';
+// base
+@import './base/reset';
+
+//component
+@import './components/button';
+@import './components/cardItem';
+@import './components/slickArr';
+
+//layout
+@import './layouts/header';
+@import './layouts/carousel';
+@import './layouts/intro';
+@import './layouts/course';
+@import './layouts/services';
+@import './layouts/student';
+@import './layouts/banner';
+@import './layouts/topCategories';
+@import './layouts/feedback';
+@import './layouts/partners';
+@import './layouts/footer';
+// page
+// theme

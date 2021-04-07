@@ -1,0 +1,8 @@
+.student{
+  .container{
+    padding: 24px 0;
+    h2{
+      @include styleText($color-black-light,$fs-2 - 1,$fw-normal)
+    }
+  }
+}

@@ -1,0 +1,50 @@
+.services{
+  background: $color-gray-5;
+  .container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    padding: 24px 0;
+    .services__item{
+      background-color: white;
+      margin-right: 16px ;
+      border: 1px solid #e8e9eb;
+      border-radius: 2px;
+      .services__content{
+        align-items: flex-start;
+        display: flex;
+        padding: $pd-2 $pd-1 $pd-1;
+      }
+      .services__img{
+        margin-right: 16px;
+        img{
+          display: block;
+        }
+      }
+      .services__text{  
+        h2 {
+          @include styleText($color-black-0,$fs-2 - 1,$fw-bold-1);
+          margin-bottom: 4px;
+        }
+        p {
+          @include styleText($color-gray-4,$fs-0 + 1,$fw-normal);
+          margin-bottom:0px;
+        }
+      }
+    }
+  }
+}
+
+@include responsive('large'){
+  .services{
+    .container{
+      .services__item{
+        .services__content{
+          display: block;
+          img{
+            margin: 0 auto;
+          }
+        }
+      }
+    }
+  }
+}
